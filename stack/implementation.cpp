@@ -26,6 +26,15 @@ public:
         }
         cout << "Deleted : " << arr[top--]<< endl;
     }
+    void peep()
+    {
+        if(top<0)
+        {
+            cout<<"stack is underflow "<<endl;
+            return;
+        }
+        cout<<"The top element is :" <<arr[top]<<endl;
+    }
 
     void display() {
         if (top == -1) {
