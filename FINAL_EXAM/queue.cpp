@@ -1,37 +1,33 @@
-//implementation of queue
-#include <iostream>
+#include<iostream>
 using namespace std;
-class que1
+class que
 {
     public:
-        int *arr;
-        int front,rear,size;
+    int *arr;
+    int front,rear,size;
     public:
-        que1(int size)
+        que(int size)
         {
             this->size=size;
             arr=new int[size];
             front=-1;
             rear=-1;
         }
-        void enqueue(int value)
-        {
-            if(front==-1&&rear==-1)
-            {
-                front=0;
+        void enqueue(int val){
+            if(front==-1&&rear==-1){
+                front-0;
             }
             rear++;
-            arr[rear]=value;
+            arr[rear]=val;
         }
-        void dequeue()
-        {
+        void dequque(){
             if(front==-1)
             {
                 cout<<"Queue is empty"<<endl;
                 return;
             }
             arr[front];
-            front++; 
+            front++;
         }
         void getfront()
         {
@@ -49,13 +45,13 @@ class que1
 };
 int main()
 {
-    que1 *q=new que1(4);
-    q->enqueue(10);
-    q->enqueue(20);
-    q->enqueue(30);
-    q->enqueue(40);
+    que *q=new que(4);
+    q->enqueue(15);
+    q->enqueue(25);
+    q->enqueue(35);
+    q->enqueue(45);
     q->display();
-    q->dequeue();
+    q->dequque();
     q->display();
     q->getfront();
     return 0;
